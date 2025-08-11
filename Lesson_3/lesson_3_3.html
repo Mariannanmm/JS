@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    let users = [
+        {name: 'John', age: 31, status: false},
+        {name: 'Bob', age: 32, status: true},
+        {name: 'Anna', age: 33, status: true},
+        {name: 'Den', age: 34, status: false},
+        {name: 'Hans', age: 32, status: true},
+        {name: 'Dorota', age: 31, status: false},
+        {name: 'Jessica', age: 31, status: false},
+        {name: 'Sid', age: 32, status: true},
+        {name: 'Sam', age: 33, status: true},
+        {name: 'Tana', age: 34, status: false},
+        {name: 'Towa', age: 35, status: true},
+    ]
+
+    for (let i = 0; i < users.length; i++) {
+        let user = users[i];
+        document.write(`<h3>${user.name} ${user.age} - ${user.status}</h3>`)
+
+    }
+
+</script>
+
+</body>
+</html>
