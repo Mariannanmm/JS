@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    //function calculator(a, b) {
+    //    let result = a + b;
+    //    return result;
+    //}
+    //let r1 = calculator(10, 20);
+    //let r2 = calculator(20, 22);
+    //console.log(r1, r2);
+
+    //function percentage(cash, percent) {
+    //    return cash / 100 * percent;
+    //}
+
+    //function tax(sum) {
+    //    return sum - percentage(sum, 20) - percentage(sum, 1.5);
+    //}
+    //let number = tax(10000);
+    //console.log(number);
+
+    function userFilter(users) {
+        let filteredUsers = [];
+        for (const user of users) {
+            if (user.age > 30) {
+                console.log(user);
+                filteredUsers.push(user);
+            }
+            
+        }
+        return filteredUsers;
+
+    }
+
+    let users = [
+        {name: 'John', age: 31, status: false},
+        {name: 'Bob', age: 32, status: true},
+        {name: 'Anna', age: 33, status: true},
+        {name: 'Den', age: 34, status: false},
+        {name: 'Hans', age: 32, status: true},
+        {name: 'Dorota', age: 31, status: false},
+        {name: 'Jessica', age: 31, status: false},
+        {name: 'Sain', age: 32, status: true},
+        {name: 'Sam', age: 33, status: true},
+        {name: 'Tana', age: 34, status: false},
+        {name: 'Towa', age: 35, status: true},
+    ]
+    let filter = userFilter(users);
+    console.log(filter);
+
+</script>
+
+</body>
+</html>
