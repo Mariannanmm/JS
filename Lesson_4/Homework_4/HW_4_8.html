@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    function foobar(arrayOfPrimitives) {
+        document.write(`<ul>`)
+        for (const item of arrayOfPrimitives) {
+            document.write(`<li>${item}</li>`);
+
+        }
+        document.write(`</ul>`);
+    }
+
+    foobar([111,'twotwotwo',333,'forforfor',555,666,true,888]);
+</script>
+
+</body>
+</html>
