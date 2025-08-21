@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    const renderUsers = (users) => {
+        users.forEach(user => {
+            const block = document.createElement('div');
+            block.style.border = '1px solid #ccc';
+            block.style.padding = '10px';
+            block.style.margin = '10px 0';
+
+            block.innerHTML = `
+      <p><strong>ID:</strong> ${user.id}</p>
+      <p><strong>Name:</strong> ${user.name}</p>
+      <p><strong>Age:</strong> ${user.age}</p>
+    `;
+
+            document.body.appendChild(block); // додаємо блок до документа
+        });
+    };
+    const people = [
+        { id: 1, name: 'Олена', age: 25 },
+        { id: 2, name: 'Ігор', age: 30 },
+        { id: 3, name: 'Марія', age: 22 }
+    ];
+
+    renderUsers(people);
+
+
+</script>
+
+</body>
+</html>
