@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    const createList = (itemText) => {
+        const ul = document.createElement('ul');
+
+        for (let i = 0; i < 3; i++) {
+            const li = document.createElement('li');
+            li.textContent = itemText;
+            ul.appendChild(li);
+        }
+
+        document.body.appendChild(ul);
+    };
+    createList('Це елемент списку');
+</script>
+
+</body>
+</html>
