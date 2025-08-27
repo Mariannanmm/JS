@@ -31,6 +31,59 @@
     //let filteredUsers = users.filter(value => value.age>31);
     //console.log(filteredUsers);
 
+    //let mappedUsers = users.map(function(value, index) {
+    //    let newUser = {
+    //        name: value.name,
+    //        age: value.age,
+    //        status: value.status,
+    //        id: index+1,
+    //    }
+    //    return newUser;
+    //})
+
+    //let mappedUsers = users.map(function(value, index) {
+    //    return {
+    //        name: value.name,
+    //        age: value.age,
+    //        status: value.status,
+    //        id: index+1,
+    //    }
+    //})
+
+    //users.map((value, index) =>{
+    //    return {id:index+1, name:value.name, age:value.age, status:value.status}
+    //})
+    // console.log(users);
+
+    //let find = users.find(value => value.name === 'Hans');
+    //console.log(find);
+
+    //console.log(users.every(value => value.status));
+    //console.log(users.some(value => value.status));
+
+    //let sort = users.sort((u1, u2) => {
+    //    return u1.age -u2.age;
+    //});
+    //console.log(sort);
+
+    //console.log(users.sort((a, b) => {
+    //    if (a.name > b.name) return 1;
+    //    if (a.name < b.name) return -1;
+    //    if (a.name === b.name) return 0;
+    //}));
+
+    let reduce = users.reduce((accumulator, user) =>{
+        if (user.status) {
+            accumulator.statT.push(user);
+        } else {
+            accumulator.statF.push(user);
+        }
+        return accumulator;
+    }, {statT:[], statF:[]});
+    console.log(reduce);
+
+
+
 </script>
 
 </body>
