@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //function User(name, age, status) {
+    //    this.name = name;
+    //    this.age = age;
+    //    this.status = status;
+
+    //}
+    //let user1 = new User('John', 23, true);
+
+    function User(name, age, status, wifeName, wifeAge) {
+        this.name = name;
+        this.age = age;
+        this.status = status;
+        this.wife = {name:wifeName, age:wifeAge};
+        this.greeting = function() {
+            console.log('hi')
+        }
+    }
+
+    let user = new User('John', 35, true, 'Anna', 30);
+    console.log(user);
+
+</script>
+</body>
+</html>
