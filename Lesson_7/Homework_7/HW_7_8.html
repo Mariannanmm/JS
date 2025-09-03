@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    class Cinderella{
+        constructor(name, age, footSize){
+            this.name = name;
+            this.age = age;
+            this.footSize = footSize;
+        }
+
+    }
+
+    class Prince{
+        constructor(name, age, slipper){
+            this.name = name;
+            this.age = age;
+            this.slipper = slipper;
+        }
+    }
+
+    const cinderellas = [
+        new Cinderella('Jasmine', 18, 34),
+        new Cinderella('Rose', 19, 35),
+        new Cinderella('Camille', 20, 36),
+        new Cinderella('Joanna', 21, 37),
+        new Cinderella('Laura', 22, 38),
+        new Cinderella('Lilian', 23, 39),
+        new Cinderella('Violet', 24, 40),
+        new Cinderella('Maria', 25, 41),
+        new Cinderella('Kathrine', 26, 42),
+        new Cinderella('Josefine', 27, 43),
+
+    ]
+
+    const prince = new Prince('John', 20, 36);
+
+    for (const cinderella of cinderellas) {
+        if (cinderella.footSize === prince.slipper) {
+            prince.wife = cinderella;
+        }
+
+    }
+    console.log(prince);
+</script>
+
+</body>
+</html>
