@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    class Car{
+        constructor(model, produser, year, maxSpeed, engineVolume) {
+            this.model = model;
+            this.produser = produser;
+            this.year = year;
+            this.maxSpeed = maxSpeed;
+            this.engineVolume = engineVolume;
+        }
+        drive() {
+            console.log( `їдемо зі швидкістю ${this.maxSpeed} на годину`)
+        };
+        info() {
+            for (const key in this) {
+                console.log(key, this[key]);
+            }
+        };
+        increaseMaxSpeed(newSpeed) {
+            if (newSpeed > 0) {}
+            this.maxSpeed = this.maxSpeed + newSpeed;
+        }
+        changeYear(newYear) {
+            if (newYear > 1815) this.year = newYear;
+        }
+        addDriver(driverObject) {
+            if (driverObject) this.driver = driverObject;
+        }
+    }
+    const car = new Car('Skoda', 'VAG', 2024, 220, 1);
+    console.log(car);
+    car.drive();
+    car.info();
+    car.increaseMaxSpeed(40);
+    console.log(car);
+</script>
+
+</body>
+</html>
