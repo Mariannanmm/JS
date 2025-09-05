@@ -1,15 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
 
-<script>
     //5 числових значень
     let luckyNumbers = [10, 25, 30, 45, 50];
     console.log(luckyNumbers);
@@ -31,8 +20,3 @@
     myBox[3] = 'important item';
 
     console.log('look what I have in my box:', myBox);
-
-</script>
-
-</body>
-</html>
