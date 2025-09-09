@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+<h1>before</h1>
+<div id='target'>
+    <b>lorem ipsum</b>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequuntur doloribus ea eaque, explicabo
+    minus nulla quibusdam suscipit unde? Aliquid doloribus expedita explicabo impedit laborum numquam possimus
+    quaerat repudiandae rerum
+    <span>lorem ipsum</span>
+</div>
+<h1>after</h1>
+<script>
+let target = document.getElementById('target');
+console.log(target.innerText);
+//target.innerText = 'okten';
+target.style.background = 'silver';
+console.log(target.getAttribute('style'));
+//target.classList.add('foo');
+//target.classList.add('bar');
+//console.log(target.classList.item(0));
+console.log(target.previousElementSibling);
+console.log(target.nextElementSibling);
+console.log(target.children);
+console.log(target.childNodes);
+</script>
+</body>
+</html>
