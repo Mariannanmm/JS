@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .users  {
+            background: lightgreen;
+            color: purple;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    //*<ul class="users"></ul> //was in body
+    //let h2 = document.createElement("h2");
+    //h2.innerText = 'some text';
+    //document.body.appendChild(h2);
+
+    //let users = [
+    //    {name: 'John', age: 31, status: false},
+    //    {name: 'Bob', age: 32, status: true},
+    //    {name: 'Anna', age: 33, status: true},
+    //    {name: 'Den', age: 34, status: false},
+    //    {name: 'Hans', age: 32, status: true},
+    //    {name: 'Dorota', age: 31, status: false},
+    //    {name: 'Jessica', age: 31, status: false},
+    //    {name: 'Sain', age: 32, status: true},
+    //    {name: 'Sam', age: 33, status: true},
+    //    {name: 'Tana', age: 34, status: false},
+    //    {name: 'Towa', age: 35, status: true},
+    //]
+    //let allUsersDiv = document.getElementsByClassName('users')[0];
+    //for (const user of users) {
+    //    let li = document.createElement('li');
+    //    li.classList.add('user');
+    //    li.innerText = user.name;
+    //    allUsersDiv.appendChild(li);
+    //}
+
+    let users = [
+        {name: 'John', age: 31, status: false},
+        {name: 'Bob', age: 32, status: true},
+        {name: 'Anna', age: 33, status: true},
+        {name: 'Den', age: 34, status: false},
+        {name: 'Hans', age: 32, status: true},
+        {name: 'Dorota', age: 31, status: false},
+        {name: 'Jessica', age: 31, status: false},
+        {name: 'Sain', age: 32, status: true},
+        {name: 'Sam', age: 33, status: true},
+        {name: 'Tana', age: 34, status: false},
+        {name: 'Towa', age: 35, status: true},
+    ]
+    for (const user of users) {
+        let userInfoDiv = document.createElement('div');
+        let h2 = document.createElement('h2');
+        h2.innerText = user.name;
+        let p = document.createElement('p');
+        p.innerText = user.status + ' ' + user.age;
+        userInfoDiv.append(h2, p);
+
+
+
+        document.body.appendChild(userInfoDiv);
+    }
+</script>
+
+</body>
+</html>
