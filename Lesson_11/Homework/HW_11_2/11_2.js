@@ -14,7 +14,7 @@ fetch('https://dummyjson.com/recipes')
             instructions.textContent = recipe.instructions.join(' ');
 
             const ingredientsList = document.createElement('ul');
-            ingredientsList.innerHTML = '<h4>Інгредієнти:</h4>';
+            ingredientsList.innerHTML = '<h4>ingridients:</h4>';
             recipe.ingredients.forEach(ingredient => {
                 const listItem = document.createElement('li');
                 listItem.textContent = ingredient;
