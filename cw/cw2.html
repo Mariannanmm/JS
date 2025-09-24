@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name/Value Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 6px;
+            background-color: #007bff;
+            color: white;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        select {
+            width: 100%;
+            height: 200px;
+            font-size: 16px;
+        }
+
+        /* Адаптивність */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+            button {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Керування парами Ім’я/Значення</h1>
+<div class="container">
+    <input type="text" id="pairInput" placeholder="Введіть пару у форматі name=value">
+
+    <div class="buttons">
+        <button onclick="addPair()">Додати</button>
+        <button onclick="sortByName()">Сортувати за Ім’ям</button>
+        <button onclick="sortByValue()">Сортувати за Значенням</button>
+        <button onclick="deleteSelected()">Видалити вибрані</button>
+    </div>
+
+    <select id="pairList" multiple></select>
+</div>
+
+<script>
+    const input = document.getElementById("pairInput");
+    const list = document.getElementById("pairList");
+    let pairs = [];
+
+    // Додавання пари
+    function addPair() {
+        const raw = input.value.trim();
+        if (!raw.includes("=")) {
+            alert("Невірний формат! Використовуйте name=value.");
+            return;
+        }
+
+        const [name, value] = raw.split("=").map(s => s.trim());
+
+        // Валідація
+        const valid = /^[a-zA-Z0-9]+$/;
+        if (!valid.test(name) || !valid.test(value)) {
+            alert("Ім’я та значення можуть містити лише літери та цифри.");
+            return;
+        }
+
+        pairs.push({ name, value });
+        renderList();
+        input.value = "";
+    }
+
+    // Відображення списку
+    function renderList() {
+        list.innerHTML = "";
+        pairs.forEach((p, i) => {
+            const option = document.createElement("option");
+            option.value = i;
+            option.textContent = `${p.name} = ${p.value}`;
+            list.appendChild(option);
+        });
+    }
+
+    // Сортування
+    function sortByName() {
+        pairs.sort((a, b) => a.name.localeCompare(b.name));
+        renderList();
+    }
+
+    function sortByValue() {
+        pairs.sort((a, b) => a.value.localeCompare(b.value));
+        renderList();
+    }
+
+    // Видалення вибраних
+    function deleteSelected() {
+        const selected = Array.from(list.selectedOptions).map(opt => parseInt(opt.value));
+        pairs = pairs.filter((_, i) => !selected.includes(i));
+        renderList();
+    }
+</script>
+
+</body>
+</html>
+
+
+</body>
+</html>
